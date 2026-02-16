@@ -45,3 +45,17 @@ pnpm start
 
 - `NEXT_PUBLIC_SITE_URL` (example: `https://afterlifesystems.space`)
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (optional)
+
+## Brand Icon Assets
+
+The project uses static icon assets from `/public`:
+
+- `android-chrome-192x192.png`
+- `android-chrome-512x512.png`
+- `apple-touch-icon.png`
+- `application-logo.png`
+- `favicon-16x16.png`
+- `favicon-32x32.png`
+- `favicon-48x48.png`
+- `favicon.ico`
+- `favicon.svg`
