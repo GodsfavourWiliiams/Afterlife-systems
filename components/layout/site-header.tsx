@@ -37,8 +37,8 @@ const SiteHeader = () => {
         }`}
       >
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex flex-shrink-0 items-center gap-3 focus:outline-none">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-indigo-500/20 bg-indigo-500/10">
+          <Link href="/" className="flex shrink-0 items-center gap-3 focus:outline-none">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-indigo-500/20 bg-indigo-500/10">
               <Logo className="text-indigo-400" size={22} />
             </div>
             <span className="font-display text-lg font-bold tracking-tight text-white">{COMPANY_NAME}</span>

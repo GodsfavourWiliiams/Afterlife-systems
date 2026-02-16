@@ -43,5 +43,5 @@ pnpm start
 
 ## SEO Environment Variables
 
-- `NEXT_PUBLIC_SITE_URL` (example: `https://afterlifesystems.io`)
+- `NEXT_PUBLIC_SITE_URL` (example: `https://afterlifesystems.space`)
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (optional)

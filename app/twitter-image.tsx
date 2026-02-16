@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { COMPANY_NAME, SUB_TAGLINE } from '@/site-constants';
+import { LogoMarkSvg } from '@/lib/logo-image';
 
 export const alt = `${COMPANY_NAME} Twitter Card Image`;
 export const size = {
@@ -26,7 +27,23 @@ export default function TwitterImage() {
           color: '#ffffff'
         }}
       >
-        <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.05 }}>{COMPANY_NAME}</div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.05 }}>{COMPANY_NAME}</div>
+          <div
+            style={{
+              width: 84,
+              height: 84,
+              borderRadius: 24,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid rgba(129, 140, 248, 0.4)',
+              backgroundColor: 'rgba(129, 140, 248, 0.08)'
+            }}
+          >
+            <LogoMarkSvg size={50} color="#A5B4FC" />
+          </div>
+        </div>
         <div style={{ fontSize: 30, lineHeight: 1.35, maxWidth: '90%', color: '#cbd5e1' }}>{SUB_TAGLINE}</div>
       </div>
     ),

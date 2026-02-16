@@ -18,7 +18,7 @@ export default function RootLayout({
     name: COMPANY_NAME,
     url: SITE_URL,
     email: CONTACT_EMAIL,
-    logo: `${SITE_URL}/icon`
+    logo: `${SITE_URL}/icon-512`
   };
 
   return (

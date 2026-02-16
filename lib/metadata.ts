@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { COMPANY_NAME } from '@/site-constants';
 
-const FALLBACK_SITE_URL = 'https://afterlifesystems.io';
+const FALLBACK_SITE_URL = 'https://afterlifesystems.space';
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK_SITE_URL;
 
 export const SITE_URL = configuredSiteUrl.endsWith('/')
@@ -49,9 +49,15 @@ export const rootMetadata: Metadata = {
     address: false
   },
   icons: {
-    icon: [{ url: '/icon' }],
-    shortcut: [{ url: '/icon' }],
-    apple: [{ url: '/icon' }]
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icon', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512', sizes: '512x512', type: 'image/png' }
+    ],
+    shortcut: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/apple-icon', sizes: '180x180', type: 'image/png' }],
+    other: [{ rel: 'mask-icon', url: '/favicon.svg', color: '#818cf8' }]
   },
   openGraph: {
     title: defaultTitle,

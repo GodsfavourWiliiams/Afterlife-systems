@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { COMPANY_NAME, TAGLINE } from '@/site-constants';
+import { LogoMarkSvg } from '@/lib/logo-image';
 
 export const alt = `${COMPANY_NAME} Open Graph Image`;
 export const size = {
@@ -25,20 +26,35 @@ export default function OpenGraphImage() {
           color: '#e2e8f0'
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            alignSelf: 'flex-start',
-            border: '1px solid rgba(255,255,255,0.15)',
-            borderRadius: '999px',
-            padding: '10px 20px',
-            fontSize: 24,
-            fontWeight: 600,
-            color: '#c7d2fe'
-          }}
-        >
-          Venture Studio & Technology Operator
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: '999px',
+              padding: '10px 20px',
+              fontSize: 24,
+              fontWeight: 600,
+              color: '#c7d2fe'
+            }}
+          >
+            Venture Studio & Technology Operator
+          </div>
+          <div
+            style={{
+              width: 78,
+              height: 78,
+              borderRadius: 24,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid rgba(129, 140, 248, 0.4)',
+              backgroundColor: 'rgba(129, 140, 248, 0.08)'
+            }}
+          >
+            <LogoMarkSvg size={46} color="#A5B4FC" />
+          </div>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
