@@ -1,7 +1,7 @@
-import { FEATURES } from '../constants';
-import { Icon } from './Icon';
+import { FEATURES } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
-const About = () => {
+const AboutSection = () => {
   return (
     <section id="about" className="relative bg-slate-950 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -68,4 +68,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

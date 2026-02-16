@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { COMPANY_NAME, NAV_ITEMS } from '../constants';
-import { Icon } from './Icon';
+import { COMPANY_NAME, NAV_ITEMS } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
-const Header = () => {
+const SiteHeader = () => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -57,7 +57,7 @@ const Header = () => {
             ))}
             <Link
               href="/contact"
-              className="ml-4 rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-950 transition-colors hover:bg-slate-200 focus:outline-none"
+              className="ml-4 rounded-full bg-white px-5 py-2 text-sm font-medium text-black transition-colors hover:bg-slate-200 focus:outline-none"
             >
               Get in Touch
             </Link>
@@ -102,4 +102,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default SiteHeader;

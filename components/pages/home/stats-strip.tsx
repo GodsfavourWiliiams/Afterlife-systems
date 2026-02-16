@@ -1,7 +1,6 @@
-import React from 'react';
-import { STATS } from '../constants';
+import { STATS } from '@/site-constants';
 
-const Stats: React.FC = () => {
+const StatsStrip = () => {
   return (
     <section className="py-12 border-y border-white/5 bg-slate-950/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,4 +21,4 @@ const Stats: React.FC = () => {
   );
 };
 
-export default Stats;
+export default StatsStrip;

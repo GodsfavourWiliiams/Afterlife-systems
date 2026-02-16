@@ -1,5 +1,5 @@
-import Legal from '@/components/Legal';
+import LegalContent from '@/components/pages/legal/legal-content';
 
 export default function TermsRoute() {
-  return <Legal type="terms" />;
+  return <LegalContent type="terms" />;
 }

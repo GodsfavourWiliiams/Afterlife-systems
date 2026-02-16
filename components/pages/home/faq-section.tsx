@@ -1,19 +1,18 @@
-import React from 'react';
-import { Icon } from './Icon';
+import { Icon } from '@/components/shared/site-icon';
 
-const FAQ: React.FC = () => {
+const FaqSection = () => {
   const faqs = [
     {
-      q: "Are you an agency?",
-      a: "No. Afterlife Systems is a product company. We build, own, and operate our own software products. We occasionally partner with enterprises for strategic technology development."
+      q: 'Are you an agency?',
+      a: 'No. Afterlife Systems is a product company. We build, own, and operate our own software products. We occasionally partner with enterprises for strategic technology development.'
     },
     {
-      q: "Where are you located?",
-      a: "We are headquartered in Uyo, Akwa Ibom State, Nigeria, but our team and infrastructure are distributed globally."
+      q: 'Where are you located?',
+      a: 'We are headquartered in Uyo, Akwa Ibom State, Nigeria, but our team and infrastructure are distributed globally.'
     },
     {
-      q: "How do you handle data privacy?",
-      a: "Privacy is a core tenant of our engineering philosophy. All our products are compliant with global data protection regulations and use end-to-end encryption where applicable."
+      q: 'How do you handle data privacy?',
+      a: 'Privacy is a core tenant of our engineering philosophy. All our products are compliant with global data protection regulations and use end-to-end encryption where applicable.'
     }
   ];
 
@@ -51,4 +50,4 @@ const FAQ: React.FC = () => {
   );
 };
 
-export default FAQ;
+export default FaqSection;

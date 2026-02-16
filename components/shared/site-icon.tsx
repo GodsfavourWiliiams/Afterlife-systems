@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ElementType } from 'react';
 import { 
   Server, 
   Boxes, 
@@ -29,8 +29,8 @@ interface IconProps {
   size?: number;
 }
 
-export const Icon: React.FC<IconProps> = ({ name, className = "", size = 24 }) => {
-  const icons: Record<string, React.ElementType> = {
+export const Icon = ({ name, className = '', size = 24 }: IconProps) => {
+  const icons: Record<string, ElementType> = {
     Server,
     Boxes,
     ShieldCheck,

@@ -1,4 +1,4 @@
-import { Product, Feature, NavItem } from './types';
+import { Product, Feature, NavItem } from './site-types';
 
 export const COMPANY_NAME = 'Afterlife Systems';
 export const TAGLINE = 'Building Scalable Software Ecosystems';

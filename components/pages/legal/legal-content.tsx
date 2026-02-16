@@ -2,7 +2,7 @@ interface LegalProps {
   type: 'privacy' | 'terms';
 }
 
-const Legal = ({ type }: LegalProps) => {
+const LegalContent = ({ type }: LegalProps) => {
   const title = type === 'privacy' ? 'Privacy Policy' : 'Terms of Service';
   const lastUpdated = 'February 24, 2025';
 
@@ -84,4 +84,4 @@ const Legal = ({ type }: LegalProps) => {
   );
 };
 
-export default Legal;
+export default LegalContent;

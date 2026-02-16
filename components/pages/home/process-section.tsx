@@ -1,27 +1,26 @@
-import React from 'react';
-import { Icon } from './Icon';
+import { Icon } from '@/components/shared/site-icon';
 
-const Process: React.FC = () => {
+const ProcessSection = () => {
   const steps = [
     {
-      title: "Ideation & Market Fit",
-      desc: "We identify inefficiencies in high-value markets and validate digital solutions.",
-      icon: "Compass"
+      title: 'Ideation & Market Fit',
+      desc: 'We identify inefficiencies in high-value markets and validate digital solutions.',
+      icon: 'Compass'
     },
     {
-      title: "Rapid Development",
-      desc: "Our core engineering team builds MVPs using modular, reusable architecture.",
-      icon: "Cpu"
+      title: 'Rapid Development',
+      desc: 'Our core engineering team builds MVPs using modular, reusable architecture.',
+      icon: 'Cpu'
     },
     {
-      title: "Scale & Optimize",
-      desc: "We deploy to our global edge network and optimize for performance and security.",
-      icon: "Globe"
+      title: 'Scale & Optimize',
+      desc: 'We deploy to our global edge network and optimize for performance and security.',
+      icon: 'Globe'
     },
     {
-      title: "Operate & Grow",
-      desc: "Dedicated product managers take over daily operations while we handle infrastructure.",
-      icon: "BarChart"
+      title: 'Operate & Grow',
+      desc: 'Dedicated product managers take over daily operations while we handle infrastructure.',
+      icon: 'BarChart'
     }
   ];
 
@@ -60,4 +59,4 @@ const Process: React.FC = () => {
   );
 };
 
-export default Process;
+export default ProcessSection;

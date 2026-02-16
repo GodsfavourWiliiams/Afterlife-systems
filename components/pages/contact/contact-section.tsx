@@ -1,7 +1,7 @@
-import { CONTACT_EMAIL, COMPANY_ADDRESS } from '../constants';
-import { Icon } from './Icon';
+import { CONTACT_EMAIL, COMPANY_ADDRESS } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <section id="contact" className="relative py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -87,4 +87,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

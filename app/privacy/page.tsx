@@ -1,5 +1,5 @@
-import Legal from '@/components/Legal';
+import LegalContent from '@/components/pages/legal/legal-content';
 
 export default function PrivacyRoute() {
-  return <Legal type="privacy" />;
+  return <LegalContent type="privacy" />;
 }

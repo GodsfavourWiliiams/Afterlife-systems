@@ -1,8 +1,8 @@
-import About from './About';
-import Stats from './Stats';
-import { Icon } from './Icon';
+import AboutSection from './about-section';
+import StatsStrip from '@/components/pages/home/stats-strip';
+import { Icon } from '@/components/shared/site-icon';
 
-const AboutPage = () => {
+const AboutPageContent = () => {
   return (
     <div className="min-h-screen pt-24">
       <div className="relative overflow-hidden border-b border-white/5 py-24">
@@ -20,7 +20,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <Stats />
+      <StatsStrip />
 
       <div className="bg-slate-950 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -67,9 +67,9 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <About />
+      <AboutSection />
     </div>
   );
 };
 
-export default AboutPage;
+export default AboutPageContent;

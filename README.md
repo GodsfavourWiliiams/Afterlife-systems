@@ -11,25 +11,25 @@ This project is now a Next.js App Router application.
 1. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 2. Start the development server:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 3. Build for production:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 4. Start production server:
 
 ```bash
-npm run start
+pnpm start
 ```
 
 ## Routes

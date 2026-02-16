@@ -1,9 +1,9 @@
-import Contact from '@/components/Contact';
+import ContactSection from '@/components/pages/contact/contact-section';
 
 export default function ContactRoute() {
   return (
     <div className="pt-24">
-      <Contact />
+      <ContactSection />
     </div>
   );
 }

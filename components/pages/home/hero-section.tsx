@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { TAGLINE, SUB_TAGLINE } from '../constants';
-import { Icon } from './Icon';
+import { TAGLINE, SUB_TAGLINE } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <section className="relative overflow-hidden pb-20 pt-32 lg:pb-32 lg:pt-48">
       <div className="absolute left-0 top-0 -z-10 h-full w-full overflow-hidden">
@@ -44,4 +44,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

@@ -1,5 +1,5 @@
-import AboutPage from '@/components/AboutPage';
+import AboutPageContent from '@/components/pages/about/about-page-content';
 
 export default function AboutRoute() {
-  return <AboutPage />;
+  return <AboutPageContent />;
 }

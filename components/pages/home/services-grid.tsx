@@ -1,8 +1,7 @@
-import React from 'react';
-import { SERVICES } from '../constants';
-import { Icon } from './Icon';
+import { SERVICES } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
-const Services: React.FC = () => {
+const ServicesGrid = () => {
   return (
     <section id="expertise" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,4 +33,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default ServicesGrid;

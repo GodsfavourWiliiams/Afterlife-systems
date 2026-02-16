@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { COMPANY_NAME, YEAR, CONTACT_EMAIL, COMPANY_ADDRESS } from '../constants';
-import { Icon } from './Icon';
+import { COMPANY_NAME, YEAR, CONTACT_EMAIL, COMPANY_ADDRESS } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
-const Footer = () => {
+const SiteFooter = () => {
   return (
     <footer className="border-t border-white/5 bg-slate-950 pb-8 pt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -101,4 +101,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default SiteFooter;

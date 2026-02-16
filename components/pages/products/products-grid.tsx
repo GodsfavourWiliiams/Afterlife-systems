@@ -1,5 +1,5 @@
-import { PRODUCTS } from '../constants';
-import { Icon } from './Icon';
+import { PRODUCTS } from '@/site-constants';
+import { Icon } from '@/components/shared/site-icon';
 
 interface ProductsProps {
   showHeader?: boolean;
