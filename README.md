@@ -40,3 +40,8 @@ pnpm start
 - `/contact` - Contact
 - `/privacy` - Privacy Policy
 - `/terms` - Terms of Service
+
+## SEO Environment Variables
+
+- `NEXT_PUBLIC_SITE_URL` (example: `https://afterlifesystems.io`)
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (optional)
