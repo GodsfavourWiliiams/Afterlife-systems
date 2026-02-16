@@ -12,8 +12,8 @@ const metadataBase = new URL(SITE_URL);
 const defaultTitle = `${COMPANY_NAME} | Venture Studio & Technology Operator`;
 const defaultDescription =
   'Afterlife Systems is a venture studio and technology operator designing resilient software products across fintech, developer tools, and digital infrastructure.';
-const defaultOgImage = '/opengraph-image';
-const defaultTwitterImage = '/twitter-image';
+const defaultOgImage = '/opengraph-image.png';
+const defaultTwitterImage = '/twitter-image.png';
 
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
