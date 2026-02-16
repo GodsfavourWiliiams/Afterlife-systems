@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { COMPANY_NAME, YEAR, CONTACT_EMAIL, COMPANY_ADDRESS } from '@/site-constants';
 import { Icon } from '@/components/shared/site-icon';
+import { Logo } from '@/components/shared/site-logo';
 
 const SiteFooter = () => {
   return (
@@ -10,7 +11,7 @@ const SiteFooter = () => {
           <div className="col-span-1 pr-8 md:col-span-2">
             <Link href="/" className="mb-6 flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-indigo-500/20 bg-indigo-500/10">
-                <Icon name="Cpu" className="text-indigo-400" size={16} />
+                <Logo className="text-indigo-400" size={18} />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">{COMPANY_NAME}</span>
             </Link>
