@@ -50,11 +50,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    const errors = validatePayload(payload);
-    if (errors.length > 0) {
-      return NextResponse.json({ error: errors[0] }, { status: 400 });
-    }
-
     const resendApiKey = process.env.RESEND_API_KEY;
     if (!resendApiKey) {
       return NextResponse.json(
@@ -64,6 +59,11 @@ export async function POST(request: NextRequest) {
         },
         { status: 503 }
       );
+    }
+
+    const errors = validatePayload(payload);
+    if (errors.length > 0) {
+      return NextResponse.json({ error: errors[0] }, { status: 400 });
     }
 
     const from = process.env.CONTACT_FROM_EMAIL ?? 'Afterlife Systems <onboarding@resend.dev>';
@@ -109,4 +109,3 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unexpected server error.' }, { status: 500 });
   }
 }
-

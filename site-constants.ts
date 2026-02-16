@@ -4,7 +4,7 @@ export const COMPANY_NAME = 'Afterlife Systems';
 export const TAGLINE = 'Building Scalable Software Ecosystems';
 export const SUB_TAGLINE =
   'We act as a venture studio and technology operator, designing resilient digital products for the modern economy.';
-export const CONTACT_EMAIL = 'hello@afterlifesystems.io';
+export const CONTACT_EMAIL = 'hello@afterlifesystems.space';
 export const COMPANY_ADDRESS = 'Uyo, Akwa Ibom State, Nigeria';
 export const YEAR = new Date().getFullYear();
 

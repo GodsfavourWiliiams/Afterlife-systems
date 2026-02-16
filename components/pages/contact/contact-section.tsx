@@ -31,10 +31,10 @@ const ContactSection = () => {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
-  const openMailtoFallback = () => {
-    const subject = encodeURIComponent(`Partnership inquiry from ${form.firstName} ${form.lastName}`);
+  const openMailtoFallback = (payload: FormState) => {
+    const subject = encodeURIComponent(`Partnership inquiry from ${payload.firstName} ${payload.lastName}`);
     const body = encodeURIComponent(
-      `Name: ${form.firstName} ${form.lastName}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+      `Name: ${payload.firstName} ${payload.lastName}\nEmail: ${payload.email}\n\nMessage:\n${payload.message}`
     );
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
@@ -43,19 +43,27 @@ const ContactSection = () => {
     event.preventDefault();
     setStatus('submitting');
     setFeedback('');
+    const formData = new FormData(event.currentTarget);
+    const payload: FormState = {
+      firstName: String(formData.get('firstName') ?? form.firstName).trim(),
+      lastName: String(formData.get('lastName') ?? form.lastName).trim(),
+      email: String(formData.get('email') ?? form.email).trim(),
+      message: String(formData.get('message') ?? form.message).trim(),
+      company: String(formData.get('company') ?? form.company).trim()
+    };
 
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
+        body: JSON.stringify(payload)
       });
 
       const data = await response.json();
 
       if (!response.ok) {
         if (data?.code === 'CONTACT_NOT_CONFIGURED') {
-          openMailtoFallback();
+          openMailtoFallback(payload);
           setStatus('success');
           setFeedback('Opened your email client to complete sending your message.');
           return;
@@ -138,6 +146,7 @@ const ContactSection = () => {
                   </label>
                   <input
                     id="first-name"
+                    name="firstName"
                     type="text"
                     value={form.firstName}
                     onChange={(e) => updateField('firstName', e.target.value)}
@@ -145,6 +154,7 @@ const ContactSection = () => {
                     placeholder="Jane"
                     required
                     minLength={2}
+                    autoComplete="given-name"
                     disabled={isDisabled}
                   />
                 </div>
@@ -154,6 +164,7 @@ const ContactSection = () => {
                   </label>
                   <input
                     id="last-name"
+                    name="lastName"
                     type="text"
                     value={form.lastName}
                     onChange={(e) => updateField('lastName', e.target.value)}
@@ -161,6 +172,7 @@ const ContactSection = () => {
                     placeholder="Doe"
                     required
                     minLength={2}
+                    autoComplete="family-name"
                     disabled={isDisabled}
                   />
                 </div>
@@ -172,12 +184,14 @@ const ContactSection = () => {
                 </label>
                 <input
                   id="email-address"
+                  name="email"
                   type="email"
                   value={form.email}
                   onChange={(e) => updateField('email', e.target.value)}
                   className="w-full rounded-xl border border-white/10 bg-slate-900/50 px-4 py-3 text-white transition-all focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/50"
                   placeholder="jane@company.com"
                   required
+                  autoComplete="email"
                   disabled={isDisabled}
                 />
               </div>
@@ -188,6 +202,7 @@ const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   value={form.message}
                   onChange={(e) => updateField('message', e.target.value)}
                   className="h-32 w-full resize-none rounded-xl border border-white/10 bg-slate-900/50 px-4 py-3 text-white transition-all focus:border-indigo-500/50 focus:outline-none focus:ring-1 focus:ring-indigo-500/50"
