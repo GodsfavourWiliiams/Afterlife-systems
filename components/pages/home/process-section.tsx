@@ -44,12 +44,7 @@ const ProcessSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
-                
-                {idx !== steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 -right-4 text-slate-700 z-10">
-                    <Icon name="ChevronRight" size={24} />
-                  </div>
-                )}
+
               </div>
             </div>
           ))}

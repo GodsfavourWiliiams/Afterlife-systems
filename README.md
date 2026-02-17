@@ -49,7 +49,7 @@ pnpm start
 ## Contact Form Environment Variables
 
 - `RESEND_API_KEY` (required for server-side email delivery)
-- `CONTACT_FROM_EMAIL` (optional, default: `Afterlife Systems <onboarding@resend.dev>`)
+- `CONTACT_FROM_EMAIL` (optional, default: `Afterlife Systems <hello@afterlifesystems.space>`)
 - `CONTACT_RECIPIENT_EMAIL` (optional, default: `hello@afterlifesystems.space`)
 
 ## Brand Icon Assets

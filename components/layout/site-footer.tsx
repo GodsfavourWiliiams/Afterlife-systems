@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { COMPANY_NAME, YEAR, CONTACT_EMAIL, COMPANY_ADDRESS } from '@/site-constants';
 import { Icon } from '@/components/shared/site-icon';
 import { Logo } from '@/components/shared/site-logo';
+import SystemStatusPill from '@/components/layout/system-status-pill';
 
 const SiteFooter = () => {
   return (
@@ -92,10 +93,7 @@ const SiteFooter = () => {
           <p className="text-xs font-medium text-slate-600">
             © {YEAR} {COMPANY_NAME}. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
-            <span className="text-xs font-semibold text-emerald-400">All Systems Operational</span>
-          </div>
+          <SystemStatusPill />
         </div>
       </div>
     </footer>

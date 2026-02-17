@@ -31,14 +31,6 @@ const ContactSection = () => {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
-  const openMailtoFallback = (payload: FormState) => {
-    const subject = encodeURIComponent(`Partnership inquiry from ${payload.firstName} ${payload.lastName}`);
-    const body = encodeURIComponent(
-      `Name: ${payload.firstName} ${payload.lastName}\nEmail: ${payload.email}\n\nMessage:\n${payload.message}`
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-  };
-
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setStatus('submitting');
@@ -62,13 +54,6 @@ const ContactSection = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        if (data?.code === 'CONTACT_NOT_CONFIGURED') {
-          openMailtoFallback(payload);
-          setStatus('success');
-          setFeedback('Opened your email client to complete sending your message.');
-          return;
-        }
-
         setStatus('error');
         setFeedback(data?.error ?? 'Unable to send your message right now.');
         return;

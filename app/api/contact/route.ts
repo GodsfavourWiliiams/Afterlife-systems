@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: errors[0] }, { status: 400 });
     }
 
-    const from = process.env.CONTACT_FROM_EMAIL ?? 'Afterlife Systems <onboarding@resend.dev>';
+    const from = process.env.CONTACT_FROM_EMAIL ?? 'Afterlife Systems <hello@afterlifesystems.space>';
     const to = process.env.CONTACT_RECIPIENT_EMAIL ?? CONTACT_EMAIL;
     const subject = `New website inquiry from ${payload.firstName} ${payload.lastName}`;
 
