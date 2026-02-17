@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { COMPANY_NAME, YEAR, CONTACT_EMAIL, COMPANY_ADDRESS } from '@/site-constants';
 import { Icon } from '@/components/shared/site-icon';
 import { Logo } from '@/components/shared/site-logo';
-import SystemStatusPill from '@/components/layout/system-status-pill';
 
 const SiteFooter = () => {
   return (
@@ -89,11 +88,10 @@ const SiteFooter = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row">
-          <p className="text-xs font-medium text-slate-600">
+        <div className="border-t border-white/5 pt-8 flex justify-center items-center">
+          <p className="text-slate-600 text-xs font-medium text-center">
             © {YEAR} {COMPANY_NAME}. All rights reserved.
           </p>
-          <SystemStatusPill />
         </div>
       </div>
     </footer>
